@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    int x, y;
+    cin>>x>>y;
+    
+    int total_First, total_Last, laps{0};
+    int difference{x-y};
+    
+    while(difference<y){
+        total_First+=x;
+        total_Last+=y;
+        difference=total_Last-total_First;
+        ++laps;
+    }
+
+    std::cout<<laps<<'\n';
+
+    return 0;
+}
